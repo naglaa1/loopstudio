@@ -9,11 +9,11 @@
 
 .container {
   width: 80%;
-  height: 100%;
+  min-height: 100%;
   margin: auto;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 35px;
 }
 
 ul {
@@ -140,6 +140,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  margin-bottom: 90px;
+}
+
+.leader .leader-vr .leader-contents .image {
+  width: 65%;
 }
 
 .leader .leader-vr .leader-contents .image img {
@@ -149,11 +154,11 @@ a {
 
 .leader .leader-vr .leader-contents .leader-data {
   position: absolute;
-  top: 35%;
-  left: 55%;
+  top: 30%;
+  left: 51%;
   z-index: 2;
   background-color: white;
-  padding: 96px 0px 0px 35px;
+  padding: 92px 0px 0px 78px;
 }
 
 .leader .leader-vr .leader-contents .leader-data h3 {
@@ -195,11 +200,14 @@ a {
           justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 20px;
-  margin-bottom: 20px p;
-  margin-bottom-font-size: 44px;
-  margin-bottom-font-weight: 600;
-  margin-bottom-font-family: 'Josefin Sans', sans-serif;
-  margin-bottom-text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.creations .our-creations .creation-title p {
+  font-size: 50px;
+  font-weight: 500;
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
 }
 
 .creations .our-creations .creation-title button {
@@ -236,6 +244,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 118px;
 }
 
 .creations .our-creations .gallery .group-img1:first-child {
@@ -250,7 +259,115 @@ a {
   width: 100%;
 }
 
+.creations .our-creations .gallery .group-img1 .gallery-imgs img:hover {
+  opacity: 0.3;
+  color: black;
+}
+
 /*End our creations*/
 /*Start footer*/
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+footer nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+}
+
+footer nav .footer-nav1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer nav .footer-nav1 p {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+footer nav .footer-nav1 .footer-link1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 140px;
+}
+
+footer nav .footer-nav1 .footer-link1 i {
+  display: block;
+  font-size: 24px;
+}
+
+footer nav .footer-nav1 .footer-link1 i:hover {
+  padding-bottom: 8px;
+  border-bottom: 2px solid white;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+footer nav .footer-nav2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 12px;
+}
+
+footer nav .footer-nav2 .footer-link2 {
+  width: 35%;
+  margin-top: 17px;
+}
+
+footer nav .footer-nav2 .footer-link2 ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer nav .footer-nav2 .footer-link2 ul li a {
+  color: white;
+  font-family: 'Alata', sans-serif;
+  font-size: 15px;
+}
+
+footer nav .footer-nav2 .footer-link2 ul li a:hover {
+  padding-bottom: 8px;
+  border-bottom: 2px solid white;
+  margin-bottom: 0px;
+}
+
+footer nav .footer-nav2 .footer-copyright p {
+  color: #8c8c8c;
+  font-family: 'Alata', sans-serif;
+  font-size: 15px;
+}
+
 /*End footer*/
 /*# sourceMappingURL=style.css.map */
