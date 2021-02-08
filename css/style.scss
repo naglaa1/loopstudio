@@ -74,8 +74,9 @@ a {
                             color: $whiteColor;
                             font-weight: 600;
                             font-size: 15px;
+                            transition: all 400ms ease-out;
                             &:hover {
-                                padding-bottom: 8px;
+                                padding-bottom: 6px;
                                 border-bottom: 2px solid $whiteColor;
                             }
                         }
@@ -197,10 +198,40 @@ a {
                 }
                 .gallery-imgs {
                     width: 23%;
+                    position: relative;
+                    display: inline-block;
+                    cursor: pointer;
+                    &:hover img {
+                        opacity: 0.3;
+                    } 
                     img {
                         width: 100%;
-                        &:hover {
-                            opacity: 0.3;
+                        
+                    }
+                    .text-img {
+                        position: absolute;
+                        z-index: 999;
+                        margin: 0 auto;
+                        left: 0;
+                        right: 0;
+                        top: 78%;
+                        text-align: left;
+                        width: 71%;
+                        transition: all 400ms ease-out;
+                    }
+                    p {
+                        font-size: 28px;
+                        color: $whiteColor;
+                        text-transform: uppercase;
+                        opacity: 1;
+                        transition-delay: 0s;
+                        transition-duration: 0.4s;
+                        height: 0;
+                    }
+                }
+                &:hover {
+                    .text-img {
+                        p {
                             color: $blackColor;
                         }
                     }
@@ -236,6 +267,7 @@ footer {
                 i {
                     display: block;
                     font-size: 24px;
+                    transition: all 400ms ease-out;
                     &:hover {
                         padding-bottom: 8px;
                         border-bottom: 2px solid $whiteColor;

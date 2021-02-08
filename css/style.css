@@ -97,10 +97,12 @@ a {
   color: white;
   font-weight: 600;
   font-size: 15px;
+  -webkit-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
 }
 
 .landing .header nav .nav-links ul li a:hover {
-  padding-bottom: 8px;
+  padding-bottom: 6px;
   border-bottom: 2px solid white;
 }
 
@@ -253,14 +255,45 @@ a {
 
 .creations .our-creations .gallery .group-img1 .gallery-imgs {
   width: 23%;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.creations .our-creations .gallery .group-img1 .gallery-imgs:hover img {
+  opacity: 0.3;
 }
 
 .creations .our-creations .gallery .group-img1 .gallery-imgs img {
   width: 100%;
 }
 
-.creations .our-creations .gallery .group-img1 .gallery-imgs img:hover {
-  opacity: 0.3;
+.creations .our-creations .gallery .group-img1 .gallery-imgs .text-img {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 78%;
+  text-align: left;
+  width: 71%;
+  -webkit-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+}
+
+.creations .our-creations .gallery .group-img1 .gallery-imgs p {
+  font-size: 28px;
+  color: white;
+  text-transform: uppercase;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  height: 0;
+}
+
+.creations .our-creations .gallery .group-img1:hover .text-img p {
   color: black;
 }
 
@@ -313,6 +346,8 @@ footer nav .footer-nav1 .footer-link1 {
 footer nav .footer-nav1 .footer-link1 i {
   display: block;
   font-size: 24px;
+  -webkit-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
 }
 
 footer nav .footer-nav1 .footer-link1 i:hover {
