@@ -47,44 +47,76 @@ a {
         position: relative;
         z-index: 5;
         nav {
-            display: flex;
+            display: inline-flex; /*we use inline-flex instead of flex for escape space blank*/
+            display: relative;
+            width: 100%;
+            justify-content: space-between;
             align-items: center;
-            height: 160px;
+            padding-top: 56px;
             .logo {
-                width: 40%;
                 font-family: 'Josefin Sans', sans-serif;
-                p {
-                    font-weight: 900;
-                    font-size: 46px;
-                    letter-spacing: -2px;
+                font-weight: 900;
+                font-size: 46px;
+                letter-spacing: -2px;
+                
+            }
+            .toggle-button {
+                width: 50px;
+                height: 28px;
+                display: none;
+                flex-direction: column;
+                justify-content: space-between;
+                position: absolute;
+                top: 60px;
+                right: 22px;
+                .bar {
+                    width: 100%;
+                    height: 3px;
+                    background-color: white;
                 }
             }
             .nav-links {
-                width: 60%;
+                // width: 60%;
                 ul {
                     width: 100%;
                     display: flex;
+                    flex-wrap: wrap; // use this for wrap in small screen
                     justify-content: flex-end;
                     font-family: 'Alata', sans-serif;
-                    li {
+
+                    .items {
                         margin-right: 25px;
                         padding-bottom: 8px;
                         position: relative;
+                        order: 3;
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            left: 30%;
+                            bottom: -5px;
+                            height: 2px;
+                            width: 50%;
+                            background: white;
+                            opacity: 0;
+                            transition: all 0.25 linear;
+                        }
+                        &:hover:after {
+                            opacity: 1;
+                        }
                         a {
                             color: $whiteColor;
                             font-weight: 600;
                             font-size: 15px;
                             transition: all 400ms ease-out;
-                            &:hover {
-                                padding-bottom: 6px;
-                                border-bottom: 2px solid $whiteColor;
-                            }
+                            // &:hover {
+                            //     padding-bottom: 6px;
+                            //     border-bottom: 2px solid $whiteColor;
+                            // }
                         }
                         &:nth-child(5) {
                             margin-right: 0;
                         }
                     }
-                    
                 }
             }
         }
@@ -99,6 +131,67 @@ a {
                 text-transform: uppercase;
             }
         }
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 54px;
+        
+        // background-color: $blackColor;
+    }
+    .header.color {
+        background-color: $blackColor;
+    }
+    .header nav .logo {
+        margin-bottom: 36px; 
+        font-size: 35px !important; /* i add important becouse when i try change the font i can not without it*/
+    }
+    .nav-links {
+        width: 100%;
+        display: none;
+        margin-top: 92px;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        // height: 100vh;
+    }
+    .nav-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .nav-links ul .items {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .items:after {
+        display: none; /*to delete the element created by after*/
+    }
+    .nav-links ul .items a {
+        font-size: 21px !important;
+        font-weight: normal  !important;
+        text-transform: uppercase;
+        font-family: 'Josefin Sans', sans-serif !important;
+    }
+    .landing .header .header-info {
+        width: 100%;
+        margin-top: 105px; 
+   }
+//    .header-info.hidden {
+//        display: none;
+//    }
+    .landing .header .header-info p {
+        font-size: 37px;
+        padding: 29px 18px;
+    }
+    .landing .header nav .toggle-button {
+        display: flex;
     }
 }
 /*End landig Page*/
@@ -118,8 +211,8 @@ a {
             .image {
                 width: 65%;
                 img {
-                    width: 100%;
-                    height: 100%;
+                    max-width: 100%;
+                    height: auto;
                 }
             }
             .leader-data {
@@ -147,6 +240,30 @@ a {
                 }
             }
         }
+    }
+}
+@media (max-width: 480px) {
+    .leader .leader-contents {
+        flex-direction: column;
+        text-align: center;
+    }
+    .leader .leader-vr .leader-contents .leader-data {
+        width: 100%;
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: 0;        
+    }
+    .leader .leader-vr .leader-contents .image {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .leader .leader-vr .leader-contents .leader-data h3 {
+        font-size: 33px;
+    }
+    .leader .leader-vr .leader-contents .leader-data p {
+        text-align: center;
+        font-size: 16px;
     }
 }
 /* End leader*/    
@@ -205,8 +322,11 @@ a {
                         opacity: 0.3;
                     } 
                     img {
-                        width: 100%;
-                        
+                        max-width: 100%;
+                        height: auto;
+                    }
+                    .img-earth-2 {
+                        display: none;
                     }
                     .text-img {
                         position: absolute;
@@ -238,6 +358,61 @@ a {
                 }
             }
         }
+    }
+}
+@media (max-width: 480px) {
+    .creations .our-creations .creation-title p {
+        font-size: 20px;
+    }
+    .creations .our-creations .gallery {
+        flex-direction: column;
+    }
+    .creations .our-creations .gallery .group-img1 {
+        flex-direction: column;
+    }
+    .creations .our-creations .gallery .group-img1 .gallery-imgs {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .creations .our-creations .gallery .group-img1 .gallery-imgs .img-earth-1 {
+        display: none;
+    }
+    .creations .our-creations .gallery .group-img1 .gallery-imgs .img-earth-2 {
+        display: block;
+    }
+    .creations .our-creations {
+        position: relative;
+    }
+    .creations .our-creations .creation-title {
+        margin-bottom: 5px;
+        padding-bottom: 3px;
+        padding-top: 0;
+    }
+    .creations .our-creations .creation-title p {
+        font-size: 25px;
+        text-align: center;
+        width: 100%;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+    .creations .our-creations .creation-title button {
+        position: absolute;
+        top: calc(100% - 126px);
+        left: calc(100% - 74%);
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        font-weight: 900;
+    }
+    .creations .our-creations .gallery .group-img1:first-child {
+        margin-bottom: 0;
+    }
+    .creations .our-creations .gallery .group-img1 .gallery-imgs .text-img {
+        
+    }
+    .creations .our-creations .gallery .group-img1 .gallery-imgs .text-img p {
+        font-size: 12px;
     }
 }
 /*End our creations*/    
