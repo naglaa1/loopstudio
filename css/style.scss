@@ -479,7 +479,7 @@ a {
 /* End leader*/    
 /*Start our creations*/
 .creations {
-    max-height: 100vh;
+    min-height: 100vh;
     background-color: $whiteColor;
     .our-creations {
         width: 100%;
@@ -534,7 +534,7 @@ a {
                         opacity: 0.3;
                     } 
                     img {
-                        min-width: 100%;
+                        max-width: 100%;
                         height: auto;
                     }
                     .img-earth-2 {

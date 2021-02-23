@@ -648,7 +648,7 @@ a {
 }
 
 .creations .our-creations .gallery .group-img1 .gallery-imgs img {
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
